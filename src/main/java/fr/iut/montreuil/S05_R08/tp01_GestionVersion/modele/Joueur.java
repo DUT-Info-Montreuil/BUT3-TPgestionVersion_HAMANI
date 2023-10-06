@@ -30,6 +30,16 @@ public class Joueur {
     private IntegerProperty niveau;
     private QuestLine listeQuetes;
 
+    public int getNbPas() {
+        return nbPas;
+    }
+
+    public void setNbPas(int nbPas) {
+        this.nbPas = nbPas;
+    }
+
+    private int nbPas;
+
     public Joueur(int x, int y, Terrain zone) {
         arme = new Gourdin(); // Le joueur commence avec un gourdin
         this.xProperty.setValue(x);
@@ -42,6 +52,7 @@ public class Joueur {
         niveau = new SimpleIntegerProperty(1);
         this.inventaire = new Inventaire();
         this.listeQuetes = new QuestLine(this);
+        this.nbPas = 0;
     }
 
     public ArmeDistance getArmeDistance() {
@@ -55,6 +66,8 @@ public class Joueur {
     public int getNiveau() {
         return niveau.getValue();
     }
+
+
 
     public void lvlUp(){
         SoundPlayer.playerLevelUp();
@@ -142,21 +155,27 @@ public class Joueur {
     public void moveUp () {
         this.yProperty.setValue(this.yProperty.getValue()-vitesseDeDeplacement);
         direction.setValue("up");
+        this.nbPas ++;
     }
 
     public void moveDown () {
         this.yProperty.setValue(this.yProperty.getValue()+vitesseDeDeplacement);
         direction.setValue("down");
+        this.nbPas ++;
     }
 
     public void moveRight () {
         this.xProperty.setValue(this.xProperty.getValue()+vitesseDeDeplacement);
         direction.setValue("right");
+        this.nbPas ++;
+
     }
 
     public void moveLeft () {
         this.xProperty.setValue(this.xProperty.getValue()-vitesseDeDeplacement);
         direction.setValue("left");
+        this.nbPas ++;
+
     }
 
     public QuestLine getListeQuetes() {

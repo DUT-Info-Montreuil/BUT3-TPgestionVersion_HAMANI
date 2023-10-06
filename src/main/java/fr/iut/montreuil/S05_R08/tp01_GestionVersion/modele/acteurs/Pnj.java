@@ -127,9 +127,17 @@ public class Pnj extends Acteur {
                 lines.add("Il a oublié son chapeau! Ya! ");
                 break;
             case "panneau":
-                lines.add("Trésor très précieux, ne pas toucher");
+                lines.add("Malgré les déceptions et les dépressions\n" +
+                        "Suite à la pression, que chacun d'entre nous ressent\n" +
+                        "Malgré la répression et les oppressions\n" +
+                        "Les discriminations, puis les arrestations\n" +
+                        "Malgré les provocations, les incarcérations\n" +
+                        "Le manque de compréhension, les peurs et les pulsions\n" +
+                        "Leur désir, de nous maintenir la tête sous l'eau\n" +
+                        "Transcende ma motivation\n" +
+                        "Nourrit mon ambition");
                 lines.add("Dur dur la vie de panneau...");
-                lines.add("Le 'Une pièce'... Il existe!");
+                lines.add("Le One Piece... existe!");
                 break;
             case "épouvantail":
                 lines.add("*Vous frappez l'épouvantail*\nPourquoi faites vous cela ?");
